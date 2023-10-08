@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import styles from '';
+import styles from '../Login/Login.module.css';
 import {FaEye, FaEyeSlash} from 'react-icons/fa'
 import googleicon from '../../svg/googleicon.svg';
 import facebookicon from '../../svg/facebookicon.svg';
