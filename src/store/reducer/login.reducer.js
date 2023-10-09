@@ -6,7 +6,11 @@ const loginSlice = createSlice({
 
     initialState: {
         loading: '',
-        user: null
+        user: null,
+        dataUser: {
+            email: '',
+            password: ''
+        }
     },
 
     extraReducers: {

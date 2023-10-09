@@ -1,0 +1,255 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, button, div, a, header, main, form, input {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(161deg,rgb(0, 0, 0),rgb(73, 73, 73),rgb(0, 0, 0));
+    background-size: 180% 180%;
+    animation: gradient-animation 4s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+
+
+.LoginComponent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.loginImage {
+    max-width: 700px;
+    height: 500px;
+}
+
+.registerComponentTitle {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+
+.formRegister {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.registerComponent {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.registerGoogle, .registerFacebook, .registerApple {
+
+    display: flex;
+    align-items: center;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 100px;
+    padding-right: 100px;
+    border: none;
+    border-radius: 23px;
+    margin-top: 7px;
+
+}
+.registerFacebook {
+    padding-right: 73px;
+}
+.registerGoogle {
+    padding-right: 88.5px;
+
+}
+
+.register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px  
+}
+
+.registerImg {
+    max-width: 800px;
+    height: 600px;
+}
+
+.registerBtnIcon {
+    width: 20px;
+
+    margin-left: -80px;
+    margin-right: 50px;
+}
+
+.registerGoogle {
+    background-color: rgba(0, 0, 255, 0.653);
+    transition: 0.3s;
+}
+
+.registerGoogle:hover {
+    background-color: rgb(0, 0, 255);
+}
+
+.registerFacebook {
+    background-color:rgba(33, 44, 116, 0.747);
+    transition: 0.3s;
+}
+
+.registerFacebook:hover {
+    background-color:rgb(33, 44, 116);
+    transition: 0.3s;
+}
+
+.registerApple {
+    background-color: rgba(0, 0, 0, 0.804);
+    transition: 0.3s;
+}
+
+.registerApple:hover {
+    background-color: rgba(0, 0, 0, 0.973);
+    transition: 0.3s;
+}
+
+.registerBtnText {
+    color: #fff;
+    font-size: 15px;
+}
+
+.formContainer {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.blockInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.blockInputText {
+    color: #fff;
+}
+
+.inputRegister {
+    padding: 7px;
+    margin-top: 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    width: 340px;
+    font-size: 14px;
+    position: relative;
+    background: none;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.inputRegister::after {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.linkInLogin {
+    margin-left: 3px;
+    color: blue;
+}
+
+
+.orBlock {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.orBlockTitle {
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #fff;
+}
+
+.or {
+    width: 155px;
+}
+
+.eyePasswordRegister {
+    border: none;
+    width: 15px;
+    position: absolute;
+    top: 370px;
+    left: 830px;
+    background: none;
+    color: #fff;
+}
+
+.eyePasswordConfirm {
+    border: none;
+    width: 15px;
+    position: absolute;
+    top: 435px;
+    left: 830px;
+    background: none;
+    color: #fff;
+}
+
+.warningsBlock {
+    text-align: center  ;
+}
+
+.passwordError, .emailError {
+    color: red;
+}
+
+.LoginBtn {
+    color: #fff;
+    background-color: rgba(0, 0, 255, 0.731);
+    border: none;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-radius: 20px;
+    margin-left: 33px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.LoginBtn:hover {
+    background-color: blue;
+}
+
+
+.linkInLoginText {
+    text-align: center;
+    color: #fff;
+}
