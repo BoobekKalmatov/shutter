@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import styles from '../Login/Login.module.css';
-import {FaEye, FaEyeSlash} from 'react-icons/fa'
+import {FaEye, FaEyeSlash} from 'react-icons/fa';
 import googleicon from '../../svg/googleicon.svg';
 import facebookicon from '../../svg/facebookicon.svg';
 import appleicon from '../../svg/appleicon.svg';
@@ -16,8 +16,11 @@ function Register() {
     const [passwordError, setPasswordError] = useState('password не может быть пустым');
     const [formValid, setFormValid] = useState(false);
 
+    const [confirmError, setConfirmError] = useState('');
+    const [confirmShow, setConfirmShow] = useState(false);
+    const [confirmDirty, setConfirmDirty] = useState(false);
 
-    const [ReisterUser, setReisterUser] = useState({
+    const [registerUser, setRegisterUser] = useState({
         email: '',
         password: '',
         confirmPassword: ''
@@ -33,6 +36,8 @@ function Register() {
                 setEmailDirty(true); break;
             case 'password':
                 setPasswordDirty(true); break;
+            case 'confirmPassword':
+                setConfirmDirty(true); break;
         }
     }
 
@@ -43,11 +48,19 @@ function Register() {
             setFormValid(true);
         };
 
-    }, [emailError,passwordError]);
+        if(registerUser.password === registerUser.confirmPassword) {
+            setConfirmError('');
+            setConfirmShow(false)
+        }else {
+            setConfirmError('*Пароли не совпадают!');
+            setConfirmShow(false);
+        }
+
+    }, [emailError,passwordError, registerUser]);
 
 
-    const loginChange = e => {
-        setLoginUser(user => {
+    const registerChange = e => {
+        setRegisterUser(user => {
             return {
                 ...user,
                 [e.target.name]: e.target.value
@@ -76,6 +89,16 @@ function Register() {
             }else {
                 setPasswordError('');
             }
+        } else if(e.target.name === 'confirmPassword') {
+            if(e.target.value.length < 6 || e.target.value.length > 8) {
+                setConfirmError('пароль должен быть больше 6 символов');
+
+                if(!e.target.value) {
+                    setConfirmError('Поле поля confirm password обязателен!');
+                }
+            }else {
+                setConfirmError('');
+            }
         }
     }
 
@@ -88,7 +111,7 @@ function Register() {
         
         <div className={styles.registerComponent}>
         
-        <h2 className={styles.registerComponentTitle}>Авторизация</h2>
+        <h2 className={styles.registerComponentTitle}>Регистрация</h2>
 
         <div className={styles.registerJwt}>
 
@@ -125,14 +148,14 @@ function Register() {
                 <div className={styles.blockInput}>
                     <span className={styles.blockInputText}>Эл. почта *</span>
                     
-                    <input onChange={e => RegisterChange(e)} onBlur={e => blurHandler(e)} type="email" name='email' className={styles.inputRegister} />
+                    <input value={registerUser.email} onChange={e => registerChange(e)} onBlur={e => blurHandler(e)} type="email" name='email' className={styles.inputRegister} />
                     {(emailDirty && emailError) && <div className={styles.emailError}>{emailError}</div>}
                 </div>
 
                 <div className={styles.blockInput}>
                     <span className={styles.blockInputText}>Пароль *</span>
                     
-                    <input onChange={e => RegisterChange(e)} onBlur={e => blurHandler(e)} type={showPassword ? "text" : "password"} name='password' className={styles.inputRegister} />
+                    <input value={registerUser.password} onChange={e => registerChange(e)} onBlur={e => blurHandler(e)} type={showPassword ? "text" : "password"} name='password' className={styles.inputRegister} />
                     <button className={styles.eyePasswordRegister} type="button" onClick={togglePasswordVisibility}>
                         {!showPassword ? <FaEyeSlash /> : <FaEye />}
                     </button>
@@ -142,13 +165,15 @@ function Register() {
                 <div className={styles.blockInput}>
                     <span className={styles.blockInputText}>Пароль *</span>
                     
-                    <input onChange={e => RegisterChange(e)} onBlur={e => blurHandler(e)} type={showPassword ? "text" : "password"} name='password' className={styles.inputRegister} />
-                    <button className={styles.eyePasswordRegister} type="button" onClick={togglePasswordVisibility}>
+                    <input value={registerUser.confirmPassword} onChange={e => registerChange(e)} onBlur={e => blurHandler(e)} type={showPassword ? "text" : "password"} name='confirmPassword' className={styles.inputRegister} />
+                    <button className={styles.eyePasswordConfirm} type="button" onClick={togglePasswordVisibility}>
                         {!showPassword ? <FaEyeSlash /> : <FaEye />}
                     </button>
-                    {(passwordDirty && passwordError) && <div className={styles.passwordError}>{passwordError}</div>}
+                    {(confirmDirty && confirmError) && <div className={styles.passwordError}>{confirmError}</div>}
+                    {(confirmShow == false) && <span className={styles.confirmErrorText}>{confirmError}</span>}
                 </div>
 
+                <button disabled={!formValid} className={styles.LoginBtn}>отправить</button>
                 <div className={styles.linkInLoginBlock}>
                     <p className={styles.linkInLoginText}>
                         Если есть акаунт можете 
@@ -158,7 +183,7 @@ function Register() {
 
             </div>
 
-            <button className={styles.LoginBtn}>отправить</button>
+            
         </form>
         </div>
     

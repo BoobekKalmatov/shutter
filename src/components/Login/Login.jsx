@@ -122,32 +122,34 @@ function Login() {
 
                
                 <div className={styles.blockInput}>
-                    <span className={styles.blockInputText}>Эл. почта *</span>
+                    <span className={styles.blockInputText}>Эл. почта</span>
                     
-                    <input onChange={e => loginChange(e)} onBlur={e => blurHandler(e)} type="email" name='email' className={styles.inputRegister} />
+                    <input value={loginUser.email} onChange={e => loginChange(e)} onBlur={e => blurHandler(e)} type="email" name='email' className={styles.inputRegister} />
                     {(emailDirty && emailError) && <div className={styles.emailError}>{emailError}</div>}
                 </div>
 
                 <div className={styles.blockInput}>
-                    <span className={styles.blockInputText}>Пароль *</span>
+                    <span className={styles.blockInputText}>Пароль</span>
                     
-                    <input onChange={e => loginChange(e)} onBlur={e => blurHandler(e)} type={showPassword ? "text" : "password"} name='password' className={styles.inputRegister} />
+                    <input value={loginUser.password} onChange={e => loginChange(e)} onBlur={e => blurHandler(e)} type={showPassword ? "text" : "password"} name='password' className={styles.inputRegister} />
                     <button className={styles.eyePasswordRegister} type="button" onClick={togglePasswordVisibility}>
                         {!showPassword ? <FaEyeSlash /> : <FaEye />}
                     </button>
                     {(passwordDirty && passwordError) && <div className={styles.passwordError}>{passwordError}</div>}
                 </div>
 
+                <button className={styles.LoginBtn}>отправить</button>
+
                 <div className={styles.linkInLoginBlock}>
                     <p className={styles.linkInLoginText}>
-                        Если вы еще не регистрировались то можете 
+                        Если вы еще не регистрировались то можете <br />
                         <NavLink to='/register' className={styles.linkInLogin}>Зарегистрироваться</NavLink>
                     </p>
                 </div>
 
             </div>
 
-            <button className={styles.LoginBtn}>отправить</button>
+            
         </form>
         </div>
     

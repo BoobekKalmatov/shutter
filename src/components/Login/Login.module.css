@@ -10,16 +10,48 @@ h1, h2, h3, h4, h5, h6, p, button, div, a, header, main, form, input {
     box-sizing: border-box;
 }
 
+body {
+    background: linear-gradient(161deg,rgb(0, 0, 0),rgb(73, 73, 73),rgb(0, 0, 0));
+    background-size: 180% 180%;
+    animation: gradient-animation 4s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+
+
+.LoginComponent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .loginImage {
     max-width: 700px;
     height: 500px;
 }
 
 .registerComponentTitle {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #fff;
 }
 
+
+.formRegister {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 .registerComponent {
     display: flex;
@@ -28,8 +60,8 @@ h1, h2, h3, h4, h5, h6, p, button, div, a, header, main, form, input {
     margin: 0 auto;
     align-items: center;
 
-    margin-top: 20px;
-    margin-bottom: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 .registerGoogle, .registerFacebook, .registerApple {
 
@@ -111,16 +143,19 @@ h1, h2, h3, h4, h5, h6, p, button, div, a, header, main, form, input {
 }
 
 .formContainer {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .blockInput {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     margin-bottom: 10px;
+}
+
+.blockInputText {
+    color: #fff;
 }
 
 .inputRegister {
@@ -130,11 +165,12 @@ h1, h2, h3, h4, h5, h6, p, button, div, a, header, main, form, input {
     border-left: none;
     border-right: none;
     outline: none;
-    max-width: 360px;
+    width: 340px;
     font-size: 14px;
-
     position: relative;
-
+    background: none;
+    color: #fff;
+    border-bottom: 1px solid #fff;
 }
 
 .inputRegister::after {
@@ -148,32 +184,17 @@ h1, h2, h3, h4, h5, h6, p, button, div, a, header, main, form, input {
     color: blue;
 }
 
-.formSubmit {
-    border: none;
-    border-radius: 30px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 100px;
-    padding-right: 100px;
-    background-color: rgba(0, 0, 255, 0.653);
-    transition: 0.3s;
-    text-align: center;
-    margin: 0 auto;
-    color: #fff;
-    /* margin-top: 10px; */
-    margin-bottom: 10px;
-    font-size: 15px;
-}
-
-.formSubmit:hover {
-    background-color: rgb(0, 0, 255);
-}
-
 
 .orBlock {
     display: flex;
     align-items: center;
     margin-top: 20px;
+}
+
+.orBlockTitle {
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #fff;
 }
 
 .or {
@@ -184,12 +205,21 @@ h1, h2, h3, h4, h5, h6, p, button, div, a, header, main, form, input {
     border: none;
     width: 15px;
     position: absolute;
-    top: 410px;
+    top: 370px;
     left: 830px;
     background: none;
+    color: #fff;
 }
 
-
+.eyePasswordConfirm {
+    border: none;
+    width: 15px;
+    position: absolute;
+    top: 435px;
+    left: 830px;
+    background: none;
+    color: #fff;
+}
 
 .warningsBlock {
     text-align: center  ;
@@ -201,12 +231,25 @@ h1, h2, h3, h4, h5, h6, p, button, div, a, header, main, form, input {
 
 .LoginBtn {
     color: #fff;
-    background-color: blue;
+    background-color: rgba(0, 0, 255, 0.731);
     border: none;
-    display: inline-block;
     padding-top: 12px;
     padding-bottom: 12px;
-    padding-left: 130px;
-    padding-right: 130px;
+    padding-left: 100px;
+    padding-right: 100px;
     border-radius: 20px;
+    margin-left: 33px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.LoginBtn:hover {
+    background-color: blue;
+}
+
+
+.linkInLoginText {
+    text-align: center;
+    color: #fff;
 }
