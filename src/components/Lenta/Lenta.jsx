@@ -2,7 +2,7 @@ import React from 'react'
 
 function Lenta() {
   return (
-    <div>Lenta</div>
+    <div>Lenta еуые еуые ашч</div>
   )
 }
 
