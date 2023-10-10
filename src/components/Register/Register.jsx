@@ -120,11 +120,6 @@ function Register() {
                 <span className={styles.registerBtnText}>Зарегистрироваться с Google</span>
             </button>
 
-            <button className={styles.registerFacebook}>
-                <img src={facebookicon} alt={googleicon} className={styles.registerBtnIcon} />
-                <span className={styles.registerBtnText}>Зарегистрироваться с Facebook</span>
-            </button>
-
             <button className={styles.registerApple}>
                 <img src={appleicon} alt={appleicon} className={styles.registerBtnIcon} />
                 <span className={styles.registerBtnText}>Зарегистрироваться с Apple</span>

@@ -11,28 +11,18 @@ h1, h2, h3, h4, h5, h6, p, button, div, a, header, main, form, input {
 }
 
 body {
-    background: linear-gradient(161deg,rgb(0, 0, 0),rgb(73, 73, 73),rgb(0, 0, 0));
-    background-size: 180% 180%;
-    animation: gradient-animation 4s ease infinite;
+    background-color: #fff;
 }
 
-@keyframes gradient-animation {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-}
 
 
 .LoginComponent {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    margin-left: 600px;
+    margin-top: 35px;
 }
 
 .loginImage {
@@ -43,7 +33,8 @@ body {
 .registerComponentTitle {
     margin-top: 10px;
     margin-bottom: 10px;
-    color: #fff;
+    color: black;
+    font-size: 30px;
 }
 
 
@@ -111,6 +102,8 @@ body {
 .registerGoogle {
     background-color: rgba(0, 0, 255, 0.653);
     transition: 0.3s;
+
+    width: 420px;
 }
 
 .registerGoogle:hover {
@@ -120,6 +113,7 @@ body {
 .registerFacebook {
     background-color:rgba(33, 44, 116, 0.747);
     transition: 0.3s;
+    width: 420px;
 }
 
 .registerFacebook:hover {
@@ -130,6 +124,7 @@ body {
 .registerApple {
     background-color: rgba(0, 0, 0, 0.804);
     transition: 0.3s;
+    width: 420px;
 }
 
 .registerApple:hover {
@@ -151,11 +146,16 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 0 auto;
+    align-items: center;
     margin-bottom: 10px;
 }
 
 .blockInputText {
-    color: #fff;
+    color: black;
+    text-align: left;
+    padding-right: 250px;
+    margin-top: 10px;
 }
 
 .inputRegister {
@@ -165,12 +165,12 @@ body {
     border-left: none;
     border-right: none;
     outline: none;
-    width: 340px;
+    width: 380px;
     font-size: 14px;
     position: relative;
     background: none;
-    color: #fff;
-    border-bottom: 1px solid #fff;
+    color: black;
+    border-bottom: 1px solid black;
 }
 
 .inputRegister::after {
@@ -188,37 +188,38 @@ body {
 .orBlock {
     display: flex;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .orBlockTitle {
     margin-left: 5px;
     margin-right: 5px;
-    color: #fff;
+    color: black;
 }
 
 .or {
-    width: 155px;
+    width: 165px;
+    border-bottom: 1.4px solid black;
 }
 
 .eyePasswordRegister {
     border: none;
     width: 15px;
     position: absolute;
-    top: 370px;
-    left: 830px;
+    top: 390px;
+    left: 950px;
     background: none;
-    color: #fff;
+    color: black;
 }
 
 .eyePasswordConfirm {
     border: none;
     width: 15px;
     position: absolute;
-    top: 435px;
-    left: 830px;
+    top: 470px;
+    left: 950px;
     background: none;
-    color: #fff;
+    color: black;
 }
 
 .warningsBlock {
@@ -238,8 +239,8 @@ body {
     padding-left: 100px;
     padding-right: 100px;
     border-radius: 20px;
-    margin-left: 33px;
-    margin-top: 20px;
+    margin-left: 50px;
+    margin-top: 30px;
     margin-bottom: 20px;
     transition: 0.3s;
 }
@@ -251,5 +252,5 @@ body {
 
 .linkInLoginText {
     text-align: center;
-    color: #fff;
+    color: black;
 }
