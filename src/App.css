@@ -1,11 +1,123 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+a,
+a:hover,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+aside,
+footer,
+header,
+legend,
+main,
+nav,
+section {
+  display: block;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+ul,
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+address {
+  font-style: normal;
+}
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+input::-ms-clear {
+  display: none;
+}
+button,
+input[type="submit"] {
+  display: inline-block;
+  box-shadow: none;
+  background: 0 0;
+  cursor: pointer;
+}
+button:active,
+button:focus,
+input:active,
+input:focus {
+  outline: 0;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+label {
+  cursor: pointer;
+}
+:root {
+  scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4, h5, h6, p, button, div, a, header, main, form, input {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&display=swap");
+
+body {
+  background-color: #202028; /* 202028 */
+  color: #efefef;
+  font-family: "Montserrat";
+}
+
+.content {
+  margin-left: 350px;
+  margin-top: 90px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+button,
+div,
+a,
+header,
+main,
+form,
+input {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }

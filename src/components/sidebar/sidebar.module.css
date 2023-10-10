@@ -1,0 +1,33 @@
+.sidebar {
+    padding: 15px 0 0 15px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    /* background-color: #1b1b23; */
+    color: #fff;
+    height: 100vh;
+    width: 300px;
+    border-radius: 0 4px 4px 0;
+    background: linear-gradient(#1b1b23, #202028);
+}
+
+a {
+    color: #fff;
+}
+
+.sidebar__block {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sidebar__block:nth-child(2) {
+    margin-top: 25px;
+}
+
+.sidebar__item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
