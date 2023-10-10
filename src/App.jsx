@@ -11,20 +11,15 @@ function App() {
   return (
     <>
       <Layout>
-        <div className="content">
           <Routes>
-            <Route path="/navigation" element={<Navigation />} />
+            <Route path="/" element={<Navigation />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
           </Routes>
-        </div>
       </Layout>
 
-      <Routes>
-        <Route path="/" element={<Navigation />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-      </Routes>
+     
     </>
   );
 }
