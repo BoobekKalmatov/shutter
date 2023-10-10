@@ -23,6 +23,7 @@ function Lenta() {
         {akaunt: 'beka_2006', id: 17, image: {lentatestimg}, description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, consequatur.', hashtags: '#anime #animephoto'},
     ]
   return (
+
     <div className={styles.lentaComponent}>
 
         <div className={styles.lentaContainer}>
@@ -53,7 +54,8 @@ function Lenta() {
         </div>
 
     </div>
+
   )
 }
 
-export default Lenta
+export default Lenta;
