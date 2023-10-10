@@ -6,7 +6,7 @@ import Login from './components/Login/Login';
 import Navigation from './components/Navigation/Navigation';
 import Profile from './components/Profile/Profile';
 import Register from './components/Register/Register';
-
+import Layout from './components/Layout'
 
 function App() {
   return (
