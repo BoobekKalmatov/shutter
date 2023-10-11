@@ -13,20 +13,20 @@ function Sidebar() {
   return (
     <div className={styles.sidebar}>
       <div>
-        <NavLink to="/lenta">
+        <NavLink to="/">
           <img src="logo-white.png" alt="" />
         </NavLink>
       </div>
       <div className={styles.sidebar__block}>
         <NavLink
           className={styles.sidebar__item}
-          to="/profile"
+          to="/login"
         >
           <VscAccount /> Профиль
         </NavLink>
         <NavLink
           className={styles.sidebar__item}
-          to="/Lenta"
+          to="/"
         >
           <BiNews />
           Лента

@@ -1,3 +1,4 @@
+
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Navigation from "./components/Navigation/Navigation";
@@ -10,15 +11,17 @@ import Help from "./components/Help/Help";
 import Settings from "./components/Settings/Settings";
 import Messages from "./components/Messages/Messages";
 import Register from "./components/Register/Register";
+import LentaImageContent from "./components/Lenta/LentaImageContent/LentaImageContent";
+
 
 function App() {
   return (
     <>
       <Layout>
+
         <div className="content">
           <Routes>
             <Route path="/" element={<Lenta />} />
-            <Route path="/Lenta" element={<Lenta />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/login" element={<Login />} />
             <Route path="/Saved" element={<Saved />} />
@@ -26,9 +29,12 @@ function App() {
             <Route path="/Settings" element={<Settings />} />
             <Route path="/Messages" element={<Messages />} />
             <Route path="/register" element={<Register />} />
+            <Route path='/lentaimg' element={<LentaImageContent/>}/>
+
           </Routes>
         </div>
       </Layout>
+
     </>
   );
 }

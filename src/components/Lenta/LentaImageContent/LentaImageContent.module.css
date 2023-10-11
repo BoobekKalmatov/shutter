@@ -1,0 +1,57 @@
+.subscribeBlock {
+    display: flex;
+    justify-content: space-around;
+    max-width: 300px;
+    align-items: center;
+}
+
+.lentaImg {
+    width: 350px;
+    height: 400px;
+
+}
+
+.LentaContent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 100%;
+    margin: 0 auto;
+    gap: 10px;
+
+
+    /* padding: 20px; */
+
+}
+
+
+
+.lentaBlock {
+    position: relative;
+}
+
+
+.subscribeBlock {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    
+    transition: 0.4s;
+}
+
+
+.subscribeBtn {
+    color: #fff;
+    background-color: black;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.akaunt {
+    color: red;
+    border-bottom: 1px solid red;
+    margin-right: 120px;
+    margin-left: 10px;
+
+    font-weight: 500;
+}
+
