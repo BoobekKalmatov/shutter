@@ -21,8 +21,8 @@ h1, h2, h3, h4, h5, h6, p, button, div, a, header, main, form, input {
     flex-direction: column;
     justify-content: center;
 
-    margin-left: 600px;
-    margin-top: 35px;
+    margin-left: 200px;
+    margin-top: -50px;
 }
 
 .loginImage {
@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6, p, button, div, a, header, main, form, input {
 .registerComponentTitle {
     margin-top: 10px;
     margin-bottom: 10px;
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: 30px;
 }
 
@@ -152,7 +152,7 @@ h1, h2, h3, h4, h5, h6, p, button, div, a, header, main, form, input {
 }
 
 .blockInputText {
-    color: black;
+    color: rgb(255, 255, 255);
     text-align: left;
     padding-right: 250px;
     margin-top: 10px;
@@ -169,8 +169,8 @@ h1, h2, h3, h4, h5, h6, p, button, div, a, header, main, form, input {
     font-size: 14px;
     position: relative;
     background: none;
-    color: black;
-    border-bottom: 1px solid black;
+    color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(255, 255, 255);
 }
 
 .inputRegister::after {
@@ -194,12 +194,12 @@ h1, h2, h3, h4, h5, h6, p, button, div, a, header, main, form, input {
 .orBlockTitle {
     margin-left: 5px;
     margin-right: 5px;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .or {
     width: 165px;
-    border-bottom: 1.4px solid black;
+    border-bottom: 1.4px solid rgb(255, 255, 255);
 }
 
 .eyePasswordRegister {
@@ -207,9 +207,9 @@ h1, h2, h3, h4, h5, h6, p, button, div, a, header, main, form, input {
     width: 15px;
     position: absolute;
     top: 390px;
-    left: 950px;
+    left: 800px;
     background: none;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .eyePasswordConfirm {
@@ -217,9 +217,9 @@ h1, h2, h3, h4, h5, h6, p, button, div, a, header, main, form, input {
     width: 15px;
     position: absolute;
     top: 470px;
-    left: 950px;
+    left: 800px;
     background: none;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .warningsBlock {
@@ -252,5 +252,5 @@ h1, h2, h3, h4, h5, h6, p, button, div, a, header, main, form, input {
 
 .linkInLoginText {
     text-align: center;
-    color: black;
+    color: rgb(255, 255, 255);
 }
