@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import cl from "./sidebar.module.css";
+import { NavLink, activeClassName } from "react-router-dom";
+import styles from "./sidebar.module.css";
 import { VscAccount, VscSettingsGear, VscSave } from "react-icons/vsc";
 import {
   BiHelpCircle,
@@ -11,43 +11,64 @@ import {
 
 function Sidebar() {
   return (
-    <div className={cl.sidebar}>
+    <div className={styles.sidebar}>
       <div>
-        <Link to="/lenta">
-          <img src="logo-white.svg" alt="" />
-        </Link>
+        <NavLink to="/lenta">
+          <img src="logo-white.png" alt="" />
+        </NavLink>
       </div>
-      <div className={cl.sidebar__block}>
-        <Link className={cl.sidebar__item} to="/profile">
+      <div className={styles.sidebar__block}>
+        <NavLink
+          className={styles.sidebar__item}
+          to="/profile"
+        >
           <VscAccount /> Профиль
-        </Link>
-        <Link className={cl.sidebar__item} to="/lenta">
+        </NavLink>
+        <NavLink
+          className={styles.sidebar__item}
+          to="/Lenta"
+        >
           <BiNews />
           Лента
-        </Link>
-        <Link className={cl.sidebar__item} to="/messages">
+        </NavLink>
+        <NavLink
+          className={styles.sidebar__item}
+          to="/Messages"
+        >
           <BiMessageAltDetail />
           Сообщения
-        </Link>
-        <Link className={cl.sidebar__item} to="/saved">
+        </NavLink>
+        <NavLink
+          className={styles.sidebar__item}
+          to="/Saved"
+        >
           <VscSave />
           Сохранённые
-        </Link>
+        </NavLink>
       </div>
-      <div className={cl.sidebar__block}>
-        <Link className={cl.sidebar__item} to="help">
+      <div className={styles.sidebar__block}>
+        <NavLink
+          className={styles.sidebar__item}
+          to="Help"
+        >
           <BiHelpCircle />
           Помощь
-        </Link>
-        <Link className={cl.sidebar__item} to="settings">
+        </NavLink>
+        <NavLink
+          className={styles.sidebar__item}
+          to="Settings"
+        >
           <VscSettingsGear /> Настройки
-        </Link>
+        </NavLink>
       </div>
-      <div className={cl.sidebar__block}>
-        <Link className={cl.sidebar__item} to="logout">
+      <div className={styles.sidebar__block}>
+        <NavLink
+          className={styles.sidebar__item}
+          to="Logout"
+        >
           <BiLogOut />
           Выйти
-        </Link>
+        </NavLink>
       </div>
     </div>
   );
