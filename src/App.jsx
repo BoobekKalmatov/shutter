@@ -7,6 +7,7 @@ import Navigation from './components/Navigation/Navigation';
 import Profile from './components/Profile/Profile';
 import Register from './components/Register/Register';
 import Layout from './components/Layout'
+import LentaImageContent from './components/Lenta/LentaImageContent/LentaImageContent';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path='/login' element={<Login/>}/>
           <Route path='/register' element={<Register/>}/>
           <Route path='/lenta' element={<Lenta/>}/>
+          <Route path='/lentaimg' element={<LentaImageContent/>}/>
         </Routes>
       </Layout>
 
