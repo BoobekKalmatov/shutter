@@ -93,7 +93,7 @@ body {
 }
 
 .content {
-  margin-left: 350px;
+  margin-left: 250px;
   margin-top: 90px;
 }
 
@@ -121,3 +121,7 @@ input {
   padding: 0;
   box-sizing: border-box;
 }
+
+/* .active {
+  color: #4f4f4f;
+} */
