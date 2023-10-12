@@ -1,7 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react';
+import ListMessage from './ListMessage/ListMessage';
+import styles from './Message.module.css';
 
-export default function Messages() {
+
+function Messages() {
+
+  const [myMessage, setMyMessage] = useState([]);
+  const [youMessage, setYouMessage] = useState([])
+
   return (
-    <div>Messages</div>
+    <>
+
+      <div className={styles.messageComponent}>
+        <ListMessage/>
+
+        <div className={styles.chatComponent}>
+            
+        </div>
+      </div>
+
+    </>
   )
 }
+
+export default Messages
