@@ -15,7 +15,9 @@ function Messages() {
         <ListMessage/>
 
         <div className={styles.chatComponent}>
-            
+
+            <div className={styles.chatContainer}></div>
+
         </div>
       </div>
 
