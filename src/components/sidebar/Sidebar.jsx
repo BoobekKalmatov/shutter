@@ -33,14 +33,14 @@ function Sidebar() {
         </NavLink>
         <NavLink
           className={styles.sidebar__item}
-          to="/Messages"
+          to="/messages"
         >
           <BiMessageAltDetail />
           Сообщения
         </NavLink>
         <NavLink
           className={styles.sidebar__item}
-          to="/Saved"
+          to="/saved"
         >
           <VscSave />
           Сохранённые
@@ -49,14 +49,14 @@ function Sidebar() {
       <div className={styles.sidebar__block}>
         <NavLink
           className={styles.sidebar__item}
-          to="Help"
+          to="help"
         >
           <BiHelpCircle />
           Помощь
         </NavLink>
         <NavLink
           className={styles.sidebar__item}
-          to="Settings"
+          to="settings"
         >
           <VscSettingsGear /> Настройки
         </NavLink>
@@ -64,7 +64,7 @@ function Sidebar() {
       <div className={styles.sidebar__block}>
         <NavLink
           className={styles.sidebar__item}
-          to="Logout"
+          to="logout"
         >
           <BiLogOut />
           Выйти

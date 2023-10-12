@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import styles from './ListMessage.module.css';
+
 
 function ListMessage() {
   return (

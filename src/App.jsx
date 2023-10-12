@@ -24,10 +24,10 @@ function App() {
             <Route path="/" element={<Lenta />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/Saved" element={<Saved />} />
-            <Route path="/Help" element={<Help />} />z
-            <Route path="/Settings" element={<Settings />} />
-            <Route path="/Messages" element={<Messages />} />
+            <Route path="/saved" element={<Saved />} />
+            <Route path="/help" element={<Help />} />z
+            <Route path="/settings" element={<Settings />} />
+            <Route path="/messages" element={<Messages />} />
             <Route path="/register" element={<Register />} />
             <Route path='/lentaimg' element={<LentaImageContent/>}/>
 
