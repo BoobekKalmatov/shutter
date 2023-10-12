@@ -4,11 +4,20 @@
     border-radius: 22px;
     border: 1px solid #fff;
     margin-bottom: 40px;
-
     margin-left: 50px;
+}
+
+.searchForm {
+    position: relative;
 }
 
 .lentaComponent {
     margin-top: -50px;
 }
 
+.iconSearch {
+    position: absolute;
+    top: 7px;
+    left: 425px;
+    width: 32px;
+}
